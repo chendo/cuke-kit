@@ -35,7 +35,7 @@ When /^(.*) in the "([^\"]*)" section$/ do |action, title|
 end
 
 When /^(.*) in the "([^\"]*)" row$/ do |action, title|
-  within :xpath, "//*[(th|td)/descendant-or-self::*[contains(text(), '#{title}')]]" do
+  within :xpath, "//*[(th|td|li)/descendant-or-self::*[contains(text(), '#{title}')]]" do
     When action
   end
 end
